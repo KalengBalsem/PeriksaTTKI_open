@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'one_for_all.css' %}">
+    <title>PeriksaTTKI</title>
+</head>
+<body>
+    <header>
+        <img class="logo" alt="periksattki logo" src="{% static 'images/asterisk_light.png' %}" width="30">
+        <h3 class="appname">Periksa TTKI_ (Beta)</h3>
+        <nav class="navbar">
+            <!-- credit feature -->
+             <!--
+            <span class="package_status">Kredit = <span class="credits">{{ credits_count }}</span>
+            -->
+            <a href="logout"><button class="button main logout">Keluar</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- USER INPUT -->
+        <div class="wrapper-wrapper">
+            <div class="wrapper">
+                <form class="input_form">
+                    {% csrf_token %}
+                    <textarea class='input' name="input" maxlength='2000' placeholder="Masukkan teks di sini" wrap='hard'></textarea>
+                    <button type="submit" class="send_button"><span>></span></button>
+                </form>
+            </div>
+        </div>
+        <!-- RESPONSE -->
+        <div class="response">
+        </div>
+        <button class="button copy hidden">Salin</button>
+        <div class="suggestion-wrapper">
+            <div class="suggestion" popover>
+                <strong>Saran perbaikan:</strong>
+                <div class="suggestion_list">
+                </div>
+                <input class="user_correction" type="text" placeholder="Perbaikan lain" onkeypress="handleKeyPress(event)">
+                <button class="submit_correction" onclick="sendData()">></button>
+                <p class="thankyou_alert"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <button id="darkmode_toggle" class="darkmode_toggle">
+            <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/></svg>
+        </button>
+    </footer>
+
+<script>
+    const asterisk_dark_path = "{% static 'images/asterisk_dark.png' %}";
+    const asterisk_light_path = "{% static 'images/asterisk_light.png' %}";
+</script>
+<script src="{% static 'toggle_theme.js' %}"></script>
+<script src="{% static 'main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'one_for_all.css' %}">
+    <title>PeriksaTTKI - status</title>
+</head>
+<body>
+    <div class="status">
+      <h1 class="status-header">{{ header }}</h1>
+      <p class="status-text">
+        {{ description }}
+      </p>
+      <a href="main"><button class="button">Kembali</button></a>
+    </div>
+
+    <script>
+        const asterisk_dark_path = "{% static 'images/asterisk_dark.png' %}";
+        const asterisk_light_path = "{% static 'images/asterisk_light.png' %}";
+    </script>
+    <script src="{% static 'toggle_theme.js' %}"></script>
+</body>
+</html>

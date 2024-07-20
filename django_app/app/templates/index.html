@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'one_for_all.css' %}">
+    <title>PeriksaTTKI</title>
+</head>
+<body>
+
+    <main>
+
+        <div class="center">
+            <div class="logotext-col">
+                <div>
+                    <img class="logo index" alt="periksattki logo" src="{% static 'images/asterisk_light.png' %}" width="65">
+                </div>
+                <div>
+                    <h1 class="appname">Periksa <span id="typewriter"></span><span id="cursor">_</span></h1>
+                </div>
+            </div>
+            <div class="subheading">
+                <p class="subheading">Ciptakan karya tulis terbaikmu.</p>
+            </div>
+            <div class="buttons">
+                <div class="register">
+                    <a href="register"><button class="button_index button-register">Daftar</button></a>
+                    <span>Gratis.</span>
+                </div>
+                <div class="login">
+                    <a href="login"><button class="button_index button-login">Masuk</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button id="darkmode_toggle" class="darkmode_toggle">
+        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/></svg>
+    </button>
+
+    <script>
+        function sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        const words = ['TTKI', 'penulisan', 'skripsi', 'esai', 'ejaan', 'KBBI'];
+        const el = document.getElementById("typewriter");
+
+        let sleepTime = 100;
+        let curWordIndex = 0;
+        const writeLoop = async () => {
+            while (true) {
+                // some logics
+                let curWord = words[curWordIndex];
+
+                for (let i = 0; i < curWord.length; i++) {
+                    el.innerText = curWord.substring(0, i+1);
+                    await sleep(sleepTime);
+                }
+
+                if (curWord === "TTKI") {
+                    await sleep(sleepTime * 30);
+                } else {
+                    await sleep(sleepTime * 20);
+                }
+                
+
+                for (let i = curWord.length; i > 0; i--) {
+                    el.innerText = curWord.substring(0, i-1);
+                    await sleep(sleepTime);
+                }
+
+                await sleep(sleepTime * 10);
+
+                if (curWordIndex === words.length - 1) {
+                    curWordIndex = 0;
+                } else {
+                    curWordIndex++;
+                }
+            }
+        };
+        writeLoop();
+
+    // for main.js darkmode toggle logics
+        const asterisk_dark_path = "{% static 'images/asterisk_dark.png' %}";
+        const asterisk_light_path = "{% static 'images/asterisk_light.png' %}";
+    </script>
+    
+    <script src="{% static 'toggle_theme.js' %}"></script>
+    
+</body>
+</html>

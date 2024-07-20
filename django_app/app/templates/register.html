@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'one_for_all.css' %}">
+    <title>PeriksaTTKI-SignUp</title>
+</head>
+<body>
+    
+    <div class="login_container">
+        <div class="card">
+            <div class="card-header">Daftar</div>
+            <div class="card-body">
+                {% if error_message %}
+                    <div class="alert">{{ error_message }}</div>
+                {% endif %}
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="form_group">
+                        <input type="email" class="form-control" id="email" name="email" maxlength="320" placeholder="Email" required>
+                    </div>
+                    <div class="form_group">
+                        <input type="password" class="form-control" id="password1" name="password1" placeholder="Password" required>
+                    </div>
+                    <div class="form_group">
+                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="button auth">Daftar</button>
+                </form>
+            </div>
+            <!-- GOOGLE AUTH -->
+            <div id="g_id_onload"
+                data-client_id="588477047301-ghr9jnq1ll1f57d5ailnpcjvfef812ec.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="redirect"
+                data-login_uri="https://www.periksattki.online/auth-receiver"
+                data-auto_prompt="false">
+            </div>
+
+            <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="signup_with"
+                data-size="large"
+                data-logo_alignment="left">
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://accounts.google.com/gsi/client"></script>  
+    <script>
+        const asterisk_dark_path = "{% static 'images/asterisk_dark.png' %}";
+        const asterisk_light_path = "{% static 'images/asterisk_light.png' %}";
+    </script>
+    <script src="{% static 'toggle_theme.js' %}"></script>
+</body>
+</html>
