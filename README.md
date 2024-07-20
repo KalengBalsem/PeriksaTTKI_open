@@ -1,6 +1,7 @@
 # PeriksaTTKI
 ## Overview
-![PeriksaTTKI main page](https://private-user-images.githubusercontent.com/144529349/350666713-e6705369-a8a5-4a04-a9e3-14420aace97e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE0NTQzMTAsIm5iZiI6MTcyMTQ1NDAxMCwicGF0aCI6Ii8xNDQ1MjkzNDkvMzUwNjY2NzEzLWU2NzA1MzY5LWE4YTUtNGEwNC1hOWUzLTE0NDIwYWFjZTk3ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcyMFQwNTQwMTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kZGU3N2Q5MDRmNmNlNjIzODIwY2FmMjgzYWZmMTAxNWZjZmFmOTAzMmExNzc3YzI1ZDBlY2E1OWI5NzkxODhmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.i9dseu-9qpUl0xBa3YPi688w_3j4c9C2-_OGDDz1dDE)
+![350666713-e6705369-a8a5-4a04-a9e3-14420aace97e](https://github.com/user-attachments/assets/3f45a1a8-9b9c-483b-9b50-28450c4ebac4)
+
 PeriksaTTKI adalah alat yang membantu penulisan bahasa Indonesia. Alat ini memiliki beberapa fitur utama untuk memastikan tulisan bebas dari kesalahan dan sesuai dengan kaidah bahasa Indonesia:
 - **Pengecekan Typo**: Menemukan dan memperbaiki kesalahan ketik secara otomatis.
 - **Parafrase**: Menyediakan alternatif ungkapan atau kalimat tanpa mengubah makna asli.
