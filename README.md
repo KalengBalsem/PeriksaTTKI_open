@@ -9,6 +9,9 @@ PeriksaTTKI adalah alat yang membantu penulisan bahasa Indonesia. Alat ini memil
 
 PeriksaTTKI sangat berguna bagi pelajar, penulis, dan profesional yang ingin meningkatkan kualitas tulisan mereka dalam bahasa Indonesia.
 
+## Software Architecture
+![diagram-export-7-5-2025-10_23_50-AM](https://github.com/user-attachments/assets/12fc299f-ff26-4f45-b105-79a0a09f810a)
+
 ## Installation and Use
 1. open an IDE (recommended: VScode)
 2. run the following in the terminal inside the IDE:
